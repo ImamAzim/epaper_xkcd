@@ -23,7 +23,7 @@ def display_last_xkcd():
         img = Image.open(fp)
         print(img.size)
         img_ratio = img.width / img.height
-        if (epd_ratio)*(img_ratio-1)<0:
+        if (epd_ratio-1)*(img_ratio-1)<0:
             img = img.rotate(90, expand=True)
         maxsize = epd.width, epd.height
         img.thumbnail(maxsize)
