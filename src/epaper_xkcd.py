@@ -1,4 +1,6 @@
 import epaper
+
+
 def display_last_xkcd():
     """display on epaper the last xkcd and go back to sleep
 
