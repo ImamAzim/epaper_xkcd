@@ -27,7 +27,7 @@ def display_last_xkcd():
         if (epd_ratio-1)*(img_ratio-1)<0:
             xkcd_img = xkcd_img.rotate(90, expand=True)
         maxsize = epd.width, epd.height
-        xkcd_img.thumbnail(maxsize, resample)=Image.Resampling.LANCZOS, reducing_gap=3)
+        xkcd_img.thumbnail(maxsize, resample)=Image.Resampling.LANCZOS, reducing_gap=10)
         epd_img.paste(xkcd_img)
 
         buffer = epd.getbuffer(epd_img)
