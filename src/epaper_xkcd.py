@@ -8,7 +8,7 @@ def display_last_xkcd():
     epd = epaper.epaper('epd2in13_V4').EPD()
 
     epd.init()
-    epd.clear()
+    epd.Clear()
 
     epd.sleep()
 
