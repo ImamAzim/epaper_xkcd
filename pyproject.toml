@@ -21,6 +21,7 @@ description = "display xkcd webcomics on epaper"
 dependencies = [
 	'gpiozero',
 	'waveshare-epaper',
+	'xkcd',
 ]
 
 [project.optional-dependencies]
