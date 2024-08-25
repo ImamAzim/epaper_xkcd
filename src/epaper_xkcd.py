@@ -16,18 +16,19 @@ def display_last_xkcd():
     epd.Clear()
     epd_ratio = epd.width / epd.height
 
+    epd_img = Image.new('1', (epd.width, epd.height), 255)
+
     with tempfile.TemporaryDirectory() as tmpdirname:
         comic = xkcd.getLatestComic()
         comic.download(tmpdirname, 'image')
         fp = os.path.join(tmpdirname, 'image')
-        img = Image.open(fp)
-        print(img.size)
-        img_ratio = img.width / img.height
+        xkcd_img = Image.open(fp)
+        img_ratio = xkcd_img.width / xkcd_img.height
         if (epd_ratio-1)*(img_ratio-1)<0:
-            img = img.rotate(90, expand=True)
+            xkcd_img = xkcd_img.rotate(90, expand=True)
         maxsize = epd.width, epd.height
-        img.thumbnail(maxsize)
-        print(img.size)
+        xkcd_img.thumbnail(maxsize)
+        epd_img.paste(xkcd_img)
 
 
 
