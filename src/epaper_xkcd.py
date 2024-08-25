@@ -30,6 +30,9 @@ def display_last_xkcd():
         xkcd_img.thumbnail(maxsize)
         epd_img.paste(xkcd_img)
 
+        buffer = epd.getbuffer(epd_img)
+        epd.display(buffer)
+
 
 
 
