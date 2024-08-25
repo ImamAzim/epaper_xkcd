@@ -1,32 +1,41 @@
-pyproject
+epaper xkcd
 ===================
 
-A template for a python project that can be build into a package and published on Pypi. It follows this `tutorial <https://packaging.python.org/en/latest/tutorials/packaging-projects/>`_ for packaging python projects.
+a project to display xkcd webcomics LINK on a eink display with a rapberry pi
+
+TODO: show pic of device
+
+hardware requirements
+=======================
+
+* waveshare eink display: DEVICE, LINK
+* raspberry pi zero 2w DEVICE, LINK
+
+might work with other device, but test for these..
 
 Installation
 ============
 
-.. code-block:: bash
+on a fresh no desktop raspian (bulleseyes LINK) install (some steps not necessary)
 
-    pip install pyproject
+* install git, pip, venv
+* git clone
+* create venv
+* pip install repo
+* add crontab job (startup and regular update)
+
 
 Usage
 =====
 
 
-This is an example:
-
-.. code-block:: python
-
-    import pyproject
-    pyproject.main()  # comments are usefull here
+just put rpi on the desk and watch
 
 
 Features
 ========
 
-* this
-* and that...
+* display xkc webcomic on an eink display
 
 
 License
