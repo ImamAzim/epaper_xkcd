@@ -19,6 +19,7 @@ classifiers = [
 ]
 description = "display xkcd webcomics on epaper"
 dependencies = [
+	'waveshare-epaper',
 ]
 
 [project.optional-dependencies]
