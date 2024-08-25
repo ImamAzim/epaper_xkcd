@@ -1,12 +1,14 @@
-#!/usr/bin/env python
+import epaper
+def display_last_xkcd():
+    """display on epaper the last xkcd and go back to sleep
 
+    """
+    epd = epaper.epaper('epd2in13_V4').EPD()
 
-"""
-this is my module
-"""
+    epd.init()
+    epd.clear()
 
-pass
-
+    epd.sleep()
 
 if __name__ == '__main__':
-    pass
+    display_last_xkcd()
