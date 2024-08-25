@@ -37,3 +37,6 @@ dev = [
 [project.urls]
 "Source Code" = "https://github.com/ImamAzim/epaper_xkcd"
 "Documentation" = "https://epaper_xkcd.readthedocs.io/en/latest/index.html"
+
+[project.scripts]
+epaper_xkcd = "epaper_xkcd:display_last_xkcd"
